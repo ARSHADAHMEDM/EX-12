@@ -1,11 +1,11 @@
-# EX-12 PERFORM A CASE STUDY ABOUT THE DIFFERENT ROUTING ALGORITHMS TO SELECT THE NETWORK PATH WITH ITS OPTIMUM AND ECONOMICAL DURING DATA TRANSFER
+## EX-12 PERFORM A CASE STUDY ABOUT THE DIFFERENT ROUTING ALGORITHMS TO SELECT THE NETWORK PATH WITH ITS OPTIMUM AND ECONOMICAL DURING DATA TRANSFER
 
-# DATE : 25-05-2023
+## DATE : 25-05-2023
 
-# I. LINK STATE ROUTING 
-# AIM:
+## I. LINK STATE ROUTING 
+## AIM:
 To study the link state routing protocol in NS Simulator.
-# Link State routing
+## Link State routing
 Routing is the process of selecting best paths in a network. In the past, the term routing was also used 
 to mean forwarding network traffic among networks. However this latter function is much better 
 described as simply forwarding. Routing is performed for many kinds of networks, including the 
@@ -39,7 +39,7 @@ Structured addresses allow a single routing table entry to represent the route t
 large networks, structured addressing (routing, in the narrow sense) outperforms unstructured 
 addressing (bridging). Routing has become the dominant form of addressing on the Internet. Bridging 
 is still widely used within localized environments.
-# II. FLOODING
+## II. FLOODING
 Flooding s a simple routing algorithm in which every incoming packet is sent through every outgoing 
 link except the one it arrived on. Flooding is used in bridging and in systems such as Usenet and peerto-peer file sharing and as part of some routing protocols, including OSPF, DVMRP, and those used 
 
@@ -51,7 +51,7 @@ Controlled Flooding) and RPF (Reverse Path Flooding). In SNCF, the node attaches
 and sequence number to the packet, since every node has a memory of addresses and sequence 
 numbers. If it receives a packet in memory, it drops it immediately while in RPF, the node will only 
 send the packet forward. If it is received from the next node, it sends it back to the sender.
-# Algorithm
+## Algorithm
 There are several variants of flooding algorithm. Most work roughly as follows:
 1. Each node acts as both a transmitter and a receiver.
 2. Each node tries to forward every message to every one of its neighbours except the source 
@@ -64,12 +64,12 @@ from the system. A variant of flooding called selective flooding partially addre
 only sending packets to routers in the same direction. In selective flooding the routers don't send 
 every incoming packet on every line but only on those lines which are going approximately in the 
 right direction.
-# Advantages
+## Advantages
 1. if a packet can be delivered, it will (probably multiple times).
 2. Since flooding naturally utilizes every path through the network, it will also use the shortest 
 path.
 3. This algorithm is very simple to implement.
-# Disadvantages
+## Disadvantages
 1. Flooding can be costly in terms of wasted bandwidth. While a message may only have one 
 destination it has to be sent to every host. In the case of a ping flood or a denial of service attack, it 
 can be harmful to the reliability of a computer network.
@@ -80,7 +80,7 @@ bandwidth as well as requiring an increase in processing complexity to disregard
 into account the number of nodes that a packet may have to pass through on the way to its destination.
 • Have each node keep track of every packet seen and only forward each packet once
 4. Enforce a network topology without loops
-# III. DISTANCE VECTOR
+## III. DISTANCE VECTOR
 In computer communication theory relating to packet-switched networks, a distance-vector 
 routing protocol is one of the two major classes of routing protocols, the other major class being the 
 link-state protocol. Distance-vector routing protocols use the Bellman–Ford algorithm, Ford–
@@ -119,7 +119,7 @@ features which can be used to help with instability and inaccurate routing infor
 EGP and BGP are not pure distance-vector routing protocols because a distance-vector protocol 
 calculates routes based only on link costs whereas in BGP, for example, the local route preference 
 value takes priority over the link cost.
-# Count-to-infinity problem
+## Count-to-infinity problem
 The Bellman–Ford algorithm does not prevent routing loops from happening and suffers from the 
 count-to-infinity problem. The core of the count-to-infinity problem is that if A tells B that it has a 
 path somewhere, there is no way for B to know if the path has B as a part of it. To see the problem 
